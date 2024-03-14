@@ -18,9 +18,9 @@ export default function Nav() {
     const toggleMenu = () => {
         setShowmenu(!showmenu);
     };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
+    // const handleClose = () => {
+    //     setAnchorEl(null);
+    // };
 
     return (
         <>
@@ -35,16 +35,16 @@ export default function Nav() {
                         <div className="hidden md:block">
                             <ul className="flex items-center gap-6">
                                 <li className="py-3">
-                                    <NavLink to="/" activeClassName="active" className="text-black font-semibold px-4 py-2 hover:text-primary">Home</NavLink>
+                                    <NavLink to="/" className="text-black font-semibold px-4 py-2 hover:text-primary">Home</NavLink>
                                 </li>
                                 <li className="py-3">
-                                    <NavLink activeClassName="active" to="/" className="text-black font-semibold px-4 py-2 hover:text-primary">Explor</NavLink>
+                                    <NavLink to="/" className="text-black font-semibold px-4 py-2 hover:text-primary">Explor</NavLink>
                                 </li>
                                 <li className="py-3">
-                                    <NavLink activeClassName="active" to="/" className="text-black font-semibold px-4 py-2 hover:text-primary">Best Places</NavLink>
+                                    <NavLink to="/" className="text-black font-semibold px-4 py-2 hover:text-primary">Best Places</NavLink>
                                 </li>
                                 <li className="py-3">
-                                    <NavLink activeClassName="active" to="/A" className="text-black font-semibold px-4 py-2 hover:text-primary">About</NavLink>
+                                    <NavLink to="/" className="text-black font-semibold px-4 py-2 hover:text-primary">About</NavLink>
                                 </li>
                                 <li className="py-3 relative group cursor-pointer">
                                     <div className="dropdown flex items-center" onClick={() => setShowmenu(!showmenu)}>

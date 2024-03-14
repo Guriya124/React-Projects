@@ -1,18 +1,18 @@
 import React from 'react';
 import ImageSlider from './ui/ImageSlider';
 
-function HeroSection() {
+function HeroSection({ title, subtitle, buttonText }) {
     return (
         <>
             <div className=''>
                 <ImageSlider />
             </div>
             <div className="">
-                <div className='absolute top-52 left-1/2 transform -translate-x-1/2 text-center text-white z-50'>
-                    <h1 className='text-4xl'>Welcome to Our Website</h1>
-                    <p className='text-xl'>Explore the world with us</p>
+                <div className='absolute top-52 left-1/2 transform -translate-x-1/2 text-center text-white z-45'>
+                    <h1 className='text-4xl '>{title}</h1>
+                    <p className='text-xl'>{subtitle}</p>
                 </div>
-                <div className='flex flex-col absolute bottom-40 left-1/2 transform -translate-x-1/2 z-50 shadow-2xl bg-primary/20 rounded-2xl p-4 '>
+                <div className='flex flex-col absolute bottom-40 left-1/2 transform -translate-x-1/2 z-45 shadow-2xl bg-primary/20 rounded-2xl p-4 '>
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                         <div className='flex flex-col'>
                             <label htmlFor="location" className='text-white mb-2'>Where you want to go</label>
@@ -29,17 +29,12 @@ function HeroSection() {
                     </div>
                     <div className='flex justify-center  mt-4 text-center items-center'>
                         <button className="bg-gradient-to-r from-primary to-secondary hover:bg-bg-gradient-to-r hover:from-secondary hover:bg-primary transition-all duration-700 text-white px-6 py-2 rounded-full">
-                            Explore Now
+                            {buttonText}
                         </button>
                     </div>
                 </div>
-
-
             </div>
-
         </>
-
-
     );
 }
 

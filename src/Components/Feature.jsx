@@ -17,10 +17,10 @@ export default function Feature() {
                         width={510}
                         className='hover:scale-105 hover:rotate-2 transition-all duration-700 cursor-pointer'
                     />
-                    <Link href="/" className="absolute top-1/2 left-1/2 h-14 w-14  flex flex-wrap items-center text-center rounded-full -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 transition-all duration-500"><RiSearchLine /></Link>
+                    <Link href="/" className="absolute top-1/2 left-1/2 h-14 w-14 bg-white  flex overflow-hidden justify-center items-center text-center rounded-full -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 transition-all duration-500"><RiSearchLine /></Link>
                 </div>
                 <div className='text-center py-3 px-5'>
-                    <h3 className='capitalizer text-[17px]'>{title}</h3>
+                    <h3 className='capitalizer text-[17px] font-bold'>{title}</h3>
                     <p className='text-gray text-[15px] my-2'>{des}</p>
                     {/* <button className='bg-[#E4575C] text-white rounded-lg px-4 py-2'>More Package</button> */}
                 </div>
@@ -94,8 +94,8 @@ export default function Feature() {
     return (
         <section className='max-container padding-container bg-slate-10 py-12'>
             <div className='m-auto w-[90%]'>
-                <h3 className='text-2xl font-extrabold text-center'>Featured Desitinations</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, itaque.
+                <h3 className='text-3xl font-extrabold text-center'>Destination Showcase</h3>
+                <p className='text-center'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, itaque.
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, itaque.
                 </p>
                 <div className='pt-16'>
