@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import ImaLogo from "../assets/logo.png";
-import { FaCaretDown } from "react-icons/fa";
+// import { FaCaretDown } from "react-icons/fa";
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
 
-import MenuItem from '@mui/material/MenuItem';
+// import MenuItem from '@mui/material/MenuItem';
 
-const dropdownLinks = [
-    { name: 'Package 1', link: '/package1' },
-    { name: 'Package 2', link: '/package2' },
-    { name: 'Package 3', link: '/package3' },
-];
+// const dropdownLinks = [
+//     { name: 'Package 1', link: '/package1' },
+//     { name: 'Package 2', link: '/package2' },
+//     { name: 'Package 3', link: '/package3' },
+// ];
 
 export default function Nav() {
     const [showmenu, setShowmenu] = useState(false);
@@ -24,7 +24,7 @@ export default function Nav() {
 
     return (
         <>
-            <div className="fixed top-1 right-0 w-full bg-white text-black shadow-lg  z-50 rounded-full ring-1 ring-slate-100">
+            <div className="fixed top-1 right-0 w-full bg-white text-black shadow-lg  z-50 rounded-full ring-1 ring-slate-100 ">
                 <div className="container  mx-auto ">
                     <div className="flex justify-between items-center">
                         <div>
@@ -33,22 +33,26 @@ export default function Nav() {
                             </Link>
                         </div>
                         <div className="hidden md:block">
-                            <ul className="flex items-center gap-6">
-                                <li className="py-3">
-                                    <NavLink to="/" className="text-black font-semibold px-4 py-2 hover:text-primary">Home</NavLink>
+                            <ul className="flex items-center gap-4">
+                                <li className="py-1">
+                                    <NavLink to="/" className=
+                                        {({ isActive }) => `text-black font-semibold  py-2 ${isActive ? "text-primary" : "text-black"} hover:text-primary`}>Home</NavLink>
                                 </li>
                                 <li className="py-3">
-                                    <NavLink to="/" className="text-black font-semibold px-4 py-2 hover:text-primary">Explor</NavLink>
+                                    <NavLink to="/" className={({ isActive }) => `text-black font-semibold px-4 py-2 ${isActive ? "text-primary" : "text-black"} hover:text-primary`}>Explor</NavLink>
                                 </li>
                                 <li className="py-3">
-                                    <NavLink to="/" className="text-black font-semibold px-4 py-2 hover:text-primary">Best Places</NavLink>
+                                    <NavLink to="/" className={({ isActive }) => `text-black font-semibold px-4 py-2 ${isActive ? "text-primary" : "text-black"} hover:text-primary`}>Best Places</NavLink>
                                 </li>
                                 <li className="py-3">
-                                    <NavLink to="/" className="text-black font-semibold px-4 py-2 hover:text-primary">About</NavLink>
+                                    <NavLink to="/about" className={({ isActive }) => `text-black font-semibold px-4 py-2 ${isActive ? "text-primary" : "text-black"} hover:text-primary`}>About</NavLink>
                                 </li>
-                                <li className="py-3 relative group cursor-pointer">
+                                <li className="py-3">
+                                    <NavLink to="/packages" className={({ isActive }) => `text-black font-semibold px-4 py-2 ${isActive ? "text-primary" : "text-black"} hover:text-primary`}>Packages</NavLink>
+                                </li>
+                                {/* <li className="py-3 relative group cursor-pointer">
                                     <div className="dropdown flex items-center" onClick={() => setShowmenu(!showmenu)}>
-                                        <span>All Packages</span>
+                                        <span className={({ isActive }) => `text-black font-semibold px-4 py-2 ${isActive ? "text-primary" : "text-black"} hover:text-primary`}>Packages</span>
                                         <span>
                                             <FaCaretDown className={`transition-all duration-200 ${showmenu ? "rotate-180" : ""}`} />
                                         </span>
@@ -64,7 +68,7 @@ export default function Nav() {
                                             ))}
                                         </ul>
                                     </div>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                         <div className="flex items-center gap-4">

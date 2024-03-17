@@ -1,10 +1,10 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import pic1 from '../../assets/pic1.webp';
 import pic2 from '../../assets/pic2.webp';
-import pic3 from '../../assets/pic6.jpg';
+import pic3 from '../../assets/pic12.jpg';
 
 export default function ImageSlider() {
     const sliderRef = useRef(null);
@@ -26,7 +26,7 @@ export default function ImageSlider() {
 
     return (
         <>
-            <div className="slider-container" style={{ paddingTop: '15px', maxWidth: '100vw', overflowX: 'hidden' }}>
+            <div className="slider-container" style={{ maxWidth: '100vw', overflowX: 'hidden' }}>
                 <Slider {...settings} ref={sliderRef}>
                     {images.map((image, index) => (
                         <div key={index} className="relative flex justify-center items-center">

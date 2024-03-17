@@ -1,9 +1,81 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 
-export default function Footer() {
+const FOOTER = [
+  {
+    title: 'Learn More',
+    links: ['About Us', 'Destinations', 'Travel Guides', 'Book Now', 'Privacy Policy'],
+  },
+  {
+    title: 'Our Community',
+    links: ['Terms and Conditions', 'Special Offers', 'Customer Reviews'],
+  },
+];
+
+const Social = {
+  title: 'Social Media',
+  links: [<FaFacebook />, <FaInstagram />, <FaTwitter />],
+};
+
+const ContactUs = {
+  title: 'Contact Us',
+  links: [
+    { value: "123-456-7890" },
+    { value: "info@gmail.com" },
+  ],
+};
+
+const Footer = () => {
+  const FooterColumn = ({ title, children }) => {
+    return (
+      <div className='footer-column'>
+        <h4 className='footer-column-title font-extrabold mb-3 '>{title}</h4>
+        {children}
+      </div>
+    );
+  };
+
   return (
-    <div>
-      <h1>Footer</h1>
-    </div>
-  )
-}
+    <footer className='bg-gradient-to-b from-primary to-secondary hover:bg-bg-gradient-to-r text-black py-16'>
+      <div className='container mx-auto '>
+        <div className='flex flex-wrap justify-between items-center'>
+          <Link to='/' className='text-3xl font-bold text-black mb-4'>Yatra</Link>
+          <div className='flex flex-wrap gap-8'>
+            {FOOTER.map((col, index) => (
+              <FooterColumn key={index} title={col.title}>
+                <ul className='text-black'>
+                  {col.links.map((link, i) => (
+                    <li key={i}>
+                      <Link to={`/${link}`} className='hover:text-gray-100'>{link}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </FooterColumn>
+            ))}
+
+            <FooterColumn title={ContactUs.title}>
+              <ul className='text-black'>
+                {ContactUs.links.map((contact, i) => (
+                  <li key={i}>
+                    <span className='font-bold'>{contact.label} </span>{contact.value}
+                  </li>
+                ))}
+              </ul>
+            </FooterColumn>
+            <div className='footer-column'>
+              <h4 className='footer-column-title font-extrabold mb-3'>{Social.title}</h4>
+              <ul className='flex gap-5'>
+                {Social.links.map((link, index) => (
+                  <li key={index} className='text-black hover:text-gray-100'>{link}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

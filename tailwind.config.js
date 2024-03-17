@@ -20,10 +20,25 @@ export default {
           "2xl": "6rem",
         },
 
-
-
-
       },
+
+      backgroundImage: {
+        hero: "url('../assets/pic1.jpg')",
+        video: "url('../assets/video1.mp4')",
+      },
+      screens: {
+        xs: '400px',
+        '3xl': '1680px',
+        '4xl': '2220px',
+      },
+      maxWidth: {
+        '10xl': '1512px',
+      },
+      borderRadius: {
+        '5xl': '40px',
+      },
+
+
     },
 
   },

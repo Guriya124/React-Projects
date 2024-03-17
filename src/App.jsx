@@ -5,21 +5,16 @@ import About from './pages/About';
 import Layout from './pages/Layout';
 
 
+
 function App() {
   const [count, setCount] = useState(0)
 
+
+
   return (
+
     <>
-      <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-
-          </Routes>
-        </Layout>
-
-      </BrowserRouter>
+      
 
 
     </>

@@ -3,8 +3,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import pic1 from '../assets/pic6.jpg';
+import pic from '../assets/pic14.jpg';
 import { Link } from "react-router-dom"
 import { RiSearchLine } from 'react-icons/ri';
+import About from '../pages/About'
+import Packages from '../pages/Packages';
+
 
 export default function Feature() {
 
@@ -31,10 +35,10 @@ export default function Feature() {
 
     var settings = {
         // dots: true,
-        arrows: true,
+        arrows: false,
         autoplay: true,
         infinite: true,
-        speed: 500,
+        speed: 2000,
         slidesToShow: 4,
         slidesToScroll: 1,
         responsive: [
@@ -77,7 +81,7 @@ export default function Feature() {
         },
         {
             title: 'Title-2',
-            url: pic1,
+            url: pic,
             des: 'lorem lipsum dolor sit amet',
         },
         {
@@ -87,36 +91,43 @@ export default function Feature() {
         },
         {
             title: 'Title-4',
-            url: pic1,
+            url: pic,
             des: 'lorem lipsum dolor sit amet',
         },
     ]
     return (
-        <section className='max-container padding-container bg-slate-10 py-12'>
-            <div className='m-auto w-[90%]'>
-                <h3 className='text-3xl font-extrabold text-center'>Destination Showcase</h3>
-                <p className='text-center'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, itaque.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, itaque.
-                </p>
-                <div className='pt-16'>
-                    <Slider {...settings}>
-                        {
-                            feature.map((feature) => (
-                                <FeatureItem
-                                    key={feature.title}
-                                    url={feature.url}
-                                    des={feature.des}
-                                    title={feature.title}
-                                />
-                            ))
-                        }
+        <>
+            <section className='max-container padding-container bg-slate-10 py-12'>
+                <div className='m-auto w-[90%]'>
+                    <h3 className='text-3xl font-extrabold text-center'>Destination Showcase</h3>
+                    <p className='text-center max-w-lg m-auto text-gray-500 py-6'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, itaque.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, itaque.t amet consectetur adipisicing elit. Aperiam, itaque
+                    </p>
+                    <div className='pt-16'>
+                        <Slider {...settings}>
+                            {
+                                feature.map((feature) => (
+                                    <FeatureItem
+                                        key={feature.title}
+                                        url={feature.url}
+                                        des={feature.des}
+                                        title={feature.title}
+                                    />
+                                ))
+                            }
 
-                    </Slider>
+                        </Slider>
+                    </div>
                 </div>
-            </div>
 
 
-        </section>
+            </section>
+
+            <About />
+            <Packages />
+        </>
+
+
     )
 
 }

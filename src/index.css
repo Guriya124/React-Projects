@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 @layer base {
-    .active{
+    .active {
         @apply text-primary;
     }
+}
+
+
+.slickSlider{
+    margin-right: 20px;
 }
