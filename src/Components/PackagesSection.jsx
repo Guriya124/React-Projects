@@ -73,7 +73,7 @@ const PackagesSection = () => {
 
     const PackageItem = ({ title, price, URL, des, durations }) => {
         return (
-            <div className='max-w-full  rounded-tl-xl rounded-tr-2xl border border-gray-200 group  '>
+            <div className='max-w-full  rounded-tl-xl rounded-tr-2xl border border-gray-200 group '>
                 <div className='relative overflow-hidden'>
                     <Image
                         src={URL}
@@ -106,10 +106,10 @@ const PackagesSection = () => {
 
     return (
         <>
-            <section className='container mx-auto pt-6  bg-[#FFFAFA] '>
+            <section className='container mx-auto pt-6  bg-[#FFFAFA] px-12'>
                 <h3 className='font-bold text-center text-4xl'>Our Packages</h3>
                 <p className='text-center max-w-lg m-auto text-gray py-6 '>Lorem adipisicing elit. Omnis tenetur hic incidunt harum dolores veniam debitis ea quasi tempore doloribus.. Omnis tenetur hic incidunt harum dolores veniam debitis ea quasi tempore doloribus. Omnis tenetur hic incidunt harum dolores veniam debitis ea quasi tempore doloribus</p>
-                <div className='grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 py-11 rounded-full'>
+                <div className='grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 py-11'>
                     {
                         Package.map((card) => (
                             <PackageItem

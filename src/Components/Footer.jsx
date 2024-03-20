@@ -30,7 +30,7 @@ const Footer = () => {
   const FooterColumn = ({ title, children }) => {
     return (
       <div className='footer-column'>
-        <h4 className='footer-column-title font-extrabold mb-3 '>{title}</h4>
+        <h4 className='footer-column-title font-extrabold mb-3 text-white '>{title}</h4>
         {children}
       </div>
     );
@@ -40,14 +40,14 @@ const Footer = () => {
     <footer className='bg-gradient-to-b from-primary to-secondary hover:bg-bg-gradient-to-r text-black py-16'>
       <div className='container mx-auto '>
         <div className='flex flex-wrap justify-between items-center'>
-          <Link to='/' className='text-3xl font-bold text-black mb-4'>Yatra</Link>
+          <Link to='/' className='text-3xl font-bold text-white mb-4'>Yatra</Link>
           <div className='flex flex-wrap gap-8'>
             {FOOTER.map((col, index) => (
               <FooterColumn key={index} title={col.title}>
-                <ul className='text-black'>
+                <ul className='text-white'>
                   {col.links.map((link, i) => (
                     <li key={i}>
-                      <Link to={`/${link}`} className='hover:text-gray-100'>{link}</Link>
+                      <Link to={`/${link}`} className='hover:text-gray-800'>{link}</Link>
                     </li>
                   ))}
                 </ul>
@@ -55,19 +55,19 @@ const Footer = () => {
             ))}
 
             <FooterColumn title={ContactUs.title}>
-              <ul className='text-black'>
+              <ul className='text-white'>
                 {ContactUs.links.map((contact, i) => (
                   <li key={i}>
-                    <span className='font-bold'>{contact.label} </span>{contact.value}
+                    <span className='font-bold hover:text-gray-800'>{contact.label} </span>{contact.value}
                   </li>
                 ))}
               </ul>
             </FooterColumn>
             <div className='footer-column'>
-              <h4 className='footer-column-title font-extrabold mb-3'>{Social.title}</h4>
+              <h4 className='footer-column-title font-extrabold mb-3 text-white'>{Social.title}</h4>
               <ul className='flex gap-5'>
                 {Social.links.map((link, index) => (
-                  <li key={index} className='text-black hover:text-gray-100'>{link}</li>
+                  <li key={index} className='text-white hover:text-gray-800'>{link}</li>
                 ))}
               </ul>
             </div>

@@ -2,6 +2,7 @@
 import React from 'react'
 import PackagesSection from '../Components/PackagesSection'
 import Video from '../Components/Video'
+import Testimonial from '../Components/Testimonial'
 
 export default function Packages() {
   return (
@@ -10,9 +11,8 @@ export default function Packages() {
 
       </div>
       <PackagesSection />
-
-
       <Video />
+      <Testimonial/>
     </>
   )
 }

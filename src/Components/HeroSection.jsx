@@ -6,13 +6,13 @@ function HeroSection({ title, subtitle, buttonText }) {
         <>
             <div className='relative'>
                 <ImageSlider />
-                <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10'>
+                <div className='absolute top-52 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10'>
                     <h1 className='text-2xl sm:text-3xl md:text-4xl'>{title}</h1>
                     <p className='text-sm sm:text-base md:text-xl'>{subtitle}</p>
                 </div>
             </div>
-            <div className="relative z-20">
-                <div className='absolute bottom-4 left-1/2 transform -translate-x-1/2 sm:-translate-x-0 bg-primary/20 rounded-2xl p-4 shadow-2xl'>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <div className='bg-primary/20 rounded-2xl p-4 shadow-2xl'>
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                         <div className='flex flex-col'>
                             <label htmlFor="location" className='text-white mb-2'>Where do you want to go</label>

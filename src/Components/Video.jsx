@@ -1,7 +1,6 @@
 import React from 'react'
 import videoSource from '../assets/video1.mp4'
 import { RiPlayFill } from 'react-icons/ri';
-import Testimonial from './Testimonial';
 export default function Video() {
     return (
         <>
@@ -15,7 +14,7 @@ export default function Video() {
                 </div>
             </section>
 
-            <Testimonial/>
+        
         </>
     )
 }

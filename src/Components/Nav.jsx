@@ -38,17 +38,18 @@ export default function Nav() {
                                     <NavLink to="/" className=
                                         {({ isActive }) => `text-black font-semibold  py-2 ${isActive ? "text-primary" : "text-black"} hover:text-primary`}>Home</NavLink>
                                 </li>
+                                                               
                                 <li className="py-3">
-                                    <NavLink to="/" className={({ isActive }) => `text-black font-semibold px-4 py-2 ${isActive ? "text-primary" : "text-black"} hover:text-primary`}>Explor</NavLink>
-                                </li>
-                                <li className="py-3">
-                                    <NavLink to="/" className={({ isActive }) => `text-black font-semibold px-4 py-2 ${isActive ? "text-primary" : "text-black"} hover:text-primary`}>Best Places</NavLink>
+                                    <NavLink to="/places" className={({ isActive }) => `text-black font-semibold px-4 py-2 ${isActive ? "text-primary" : "text-black"} hover:text-primary`}>Best Places</NavLink>
                                 </li>
                                 <li className="py-3">
                                     <NavLink to="/about" className={({ isActive }) => `text-black font-semibold px-4 py-2 ${isActive ? "text-primary" : "text-black"} hover:text-primary`}>About</NavLink>
                                 </li>
                                 <li className="py-3">
                                     <NavLink to="/packages" className={({ isActive }) => `text-black font-semibold px-4 py-2 ${isActive ? "text-primary" : "text-black"} hover:text-primary`}>Packages</NavLink>
+                                </li>
+                                <li className="py-3">
+                                    <NavLink to="/contact" className={({ isActive }) => `text-black font-semibold px-4 py-2 ${isActive ? "text-primary" : "text-black"} hover:text-primary`}>Contact Us</NavLink>
                                 </li>
                                 {/* <li className="py-3 relative group cursor-pointer">
                                     <div className="dropdown flex items-center" onClick={() => setShowmenu(!showmenu)}>

@@ -21,7 +21,7 @@ export default function Feature() {
                         width={510}
                         className='hover:scale-105 hover:rotate-2 transition-all duration-700 cursor-pointer'
                     />
-                    <Link href="/" className="absolute top-1/2 left-1/2 h-14 w-14 bg-white  flex overflow-hidden justify-center items-center text-center rounded-full -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 transition-all duration-500"><RiSearchLine /></Link>
+                    <Link href="/" className="absolute top-1/2 left-1/2 h-9 w-9 bg-white  flex overflow-hidden justify-center items-center text-center rounded-full -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 transition-all duration-500"><RiSearchLine /></Link>
                 </div>
                 <div className='text-center py-3 px-5'>
                     <h3 className='capitalizer text-[17px] font-bold'>{title}</h3>

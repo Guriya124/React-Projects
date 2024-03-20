@@ -4,6 +4,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import ImageComponent from '../Components/Image'
 import pic from '../assets/pic7.png'
 import pic2 from '../assets/pic8.jpg'
+// import Testimonial from '../Components/Testimonial';
 
 
 
@@ -42,7 +43,7 @@ export default function About() {
     return (
 
         <>
-           
+
             <section className='container mx-auto py-19'>
                 <div className='flex flex-col gap-8 lg:flex-row '>
                     {/* Left */}
@@ -128,6 +129,9 @@ export default function About() {
                 </div>
 
             </section>
+            
+
+            {/* <Testimonial/> */}
         </>
     )
 }
