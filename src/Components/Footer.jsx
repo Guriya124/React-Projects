@@ -30,7 +30,7 @@ const ContactUs = {
 
 const Address = {
   title: 'Our Address',
-  value: 'Suresh Gyan Vihar University, Jaipur, Rajasthan',
+  value: 'Suresh Gyan Vihar University,  <br /> Jaipur, Rajasthan',
 };
 
 const Footer = () => {
@@ -74,7 +74,7 @@ const Footer = () => {
             <div className='footer-column'>
               <h4 className='footer-column-title font-extrabold mb-3 text-white'>{Address.title}</h4>
               <div className='flex items-center text-white'>
-                <FaMapMarkerAlt className='mr-2' /> {Address.value}
+                <FaMapMarkerAlt className='mr-2' /> <span dangerouslySetInnerHTML={{ __html: Address.value }} />
               </div>
             </div>
 
