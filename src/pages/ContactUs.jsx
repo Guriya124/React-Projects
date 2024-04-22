@@ -3,7 +3,7 @@ const ContactUs = () => {
     return (
         <div className='mx-auto py-10 mt-20 my-10 flex flex-col items-center justify-center'>
                 <div className='text-4xl text-center font-bold mb-4'>Contact Us</div>
-            <div className='flex items-center justify-center'>
+            <div className=''>
                 <form className='w-full max-w-lg'>
                     <div className='flex flex-wrap -mx-3 mb-6'>
                         <div className='w-full md:w-1/2 px-3 mb-6 md:mb-0'>
