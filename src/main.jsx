@@ -9,7 +9,7 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import './index.css'
 import Packages from './pages/Packages.jsx';
-import ContactUs from './Components/ContactUs.jsx';
+import ContactUs from './pages/ContactUs.jsx';
 // import PackagesSection from './Components/PackagesSection.jsx';
 
 const router = createBrowserRouter(
