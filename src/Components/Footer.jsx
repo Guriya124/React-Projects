@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import { FaInstagram, FaFacebook, FaTwitter, FaMapMarkerAlt } from "react-icons/fa";
 import EmailIcon from '@mui/icons-material/Email';
