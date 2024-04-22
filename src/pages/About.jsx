@@ -44,7 +44,7 @@ export default function About() {
 
         <>
 
-            <section className='container mx-auto py-19'>
+            <section className='container mx-auto py-19 mt-10'>
                 <div className='flex flex-col gap-8 lg:flex-row '>
                     {/* Left */}
                     <div className='flex flex-1 flex-col items-start justify-center '>
@@ -129,7 +129,7 @@ export default function About() {
                 </div>
 
             </section>
-            
+
 
             {/* <Testimonial/> */}
         </>
