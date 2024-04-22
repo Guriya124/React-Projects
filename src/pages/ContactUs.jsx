@@ -1,10 +1,12 @@
-import React from 'react';
 
 const ContactUs = () => {
     return (
-        <div className='container mx-auto py-10 mt-20 my-10 flex flex-col items-center justify-center'>
+        <div className='mx-auto py-10 mt-20 my-10 flex flex-col items-center justify-center'>
             <div className='flex items-center justify-center'>
-                <h1 className='text-4xl text-center font-bold mb-4'>Contact Us</h1>
+
+                <div className='text-4xl text-center font-bold mb-4'>Contact Us</div>
+
+
                 <form className='w-full max-w-lg'>
                     <div className='flex flex-wrap -mx-3 mb-6'>
                         <div className='w-full md:w-1/2 px-3 mb-6 md:mb-0'>
