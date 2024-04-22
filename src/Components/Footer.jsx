@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaTwitter, FaMapMarkerAlt } from "react-icons/fa";
+import EmailIcon from '@mui/icons-material/Email';
+import CallIcon from '@mui/icons-material/Call';
 
 const FOOTER = [
   {
@@ -21,9 +23,14 @@ const Social = {
 const ContactUs = {
   title: 'Contact Us',
   links: [
-    { value: "9572343472" },
-    { value: "guriyakumari@gmail.com" },
+    { icon: <CallIcon />, value: "9572343472" },
+    { icon: <EmailIcon />, value: "guriyakumari@gmail.com" },
   ],
+};
+
+const Address = {
+  title: 'Our Address',
+  value: 'Suresh Gyan Vihar University, Jaipur, Rajasthan',
 };
 
 const Footer = () => {
@@ -40,7 +47,7 @@ const Footer = () => {
     <footer className='bg-gradient-to-b from-primary to-secondary hover:bg-bg-gradient-to-r text-black py-16'>
       <div className='container mx-auto '>
         <div className='flex flex-wrap justify-between items-center'>
-          <Link to='/' className='text-3xl font-bold text-white mb-4'>Yatra</Link>
+          <Link to='/' className='text-3xl font-bold text-white mb-4'>Spiritural Yatra</Link>
           <div className='flex flex-wrap gap-8'>
             {FOOTER.map((col, index) => (
               <FooterColumn key={index} title={col.title}>
@@ -58,11 +65,19 @@ const Footer = () => {
               <ul className='text-white'>
                 {ContactUs.links.map((contact, i) => (
                   <li key={i}>
-                    <span className='font-bold hover:text-gray-800'>{contact.label} </span>{contact.value}
+                    <span className='font-bold hover:text-gray-800'>{contact.icon} </span>{contact.value}
                   </li>
                 ))}
               </ul>
             </FooterColumn>
+
+            <div className='footer-column'>
+              <h4 className='footer-column-title font-extrabold mb-3 text-white'>{Address.title}</h4>
+              <div className='flex items-center text-white'>
+                <FaMapMarkerAlt className='mr-2' /> {Address.value}
+              </div>
+            </div>
+
             <div className='footer-column'>
               <h4 className='footer-column-title font-extrabold mb-3 text-white'>{Social.title}</h4>
               <ul className='flex gap-5'>
