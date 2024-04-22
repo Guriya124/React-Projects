@@ -71,7 +71,7 @@ export default function About() {
                             <ImageComponent src={pic} alt={'About Image'}
                                 height={444}
                                 width={333}
-                                className='w-auto rounded-s-lg rounded-r-lg border border-gray-400 mb-20'
+                                className='w-auto rounded-s-lg rounded-r-lg border border-gray-400 mb-19'
                             />
                         </div>
                         <div>
