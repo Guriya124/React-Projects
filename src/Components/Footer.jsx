@@ -21,8 +21,8 @@ const Social = {
 const ContactUs = {
   title: 'Contact Us',
   links: [
-    { value: "123-456-7890" },
-    { value: "info@gmail.com" },
+    { value: "9572343472" },
+    { value: "guriyakumari@gmail.com" },
   ],
 };
 
