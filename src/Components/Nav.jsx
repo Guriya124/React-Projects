@@ -39,9 +39,9 @@ export default function Nav() {
                                         {({ isActive }) => `text-black font-semibold  py-2 ${isActive ? "text-primary" : "text-black"} hover:text-primary`}>Home</NavLink>
                                 </li>
                                                                
-                                <li className="py-3">
+                                {/* <li className="py-3">
                                     <NavLink to="/places" className={({ isActive }) => `text-black font-semibold px-4 py-2 ${isActive ? "text-primary" : "text-black"} hover:text-primary`}>Best Places</NavLink>
-                                </li>
+                                </li> */}
                                 <li className="py-3">
                                     <NavLink to="/about" className={({ isActive }) => `text-black font-semibold px-4 py-2 ${isActive ? "text-primary" : "text-black"} hover:text-primary`}>About</NavLink>
                                 </li>
